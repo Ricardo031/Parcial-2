@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D86DBDFD"
     android:orientation="vertical"
     tools:context=".Detallecarta">
 
@@ -10,40 +11,49 @@
         android:id="@+id/img_usuario"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/tv_nombre_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFB1B1"
         android:padding="16dp"
         android:text="Nombre de Usuario"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textColor="#FDFDFD"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-    <!-- Otras categorías -->
     <TextView
         android:id="@+id/tv_vivo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#4CAF50"
         android:padding="8dp"
         android:text="Estado: Sí"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tv_Especie"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFEB3B"
+        android:padding="8dp"
         android:text="Especie: Humano "
-        android:padding="8dp" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_cerrar_sesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#4CAF50"
         android:text="Cerrar Sesión" />
 
 </LinearLayout>

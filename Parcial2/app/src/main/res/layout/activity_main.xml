@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A9A8CEFB"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="80dp"
+        android:text="Login"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/pt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Ingrese Usuario"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/pt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="177dp"
+        android:ems="10"
+        android:hint="Digite contraseña"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="71dp"
+        android:backgroundTint="#F67D14"
+        android:text="Ingresar" />
+
+
+</LinearLayout>

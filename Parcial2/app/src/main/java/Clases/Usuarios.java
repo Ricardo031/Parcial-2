@@ -1,50 +1,66 @@
 package Clases;
 
-public class Usuarios {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Usuarios implements Parcelable {
     private String imagen;
     private String nombre;
     private String vivos;
     private String especie;
 
-
     public Usuarios(String imagen, String nombre, String especie, String vivos) {
         this.imagen = imagen;
         this.nombre = nombre;
-        this.vivos = vivos;
         this.especie = especie;
-
+        this.vivos = vivos;
     }
+
+    protected Usuarios(Parcel in) {
+        imagen = in.readString();
+        nombre = in.readString();
+        vivos = in.readString();
+        especie = in.readString();
+    }
+
+    public static final Creator<Usuarios> CREATOR = new Creator<Usuarios>() {
+        @Override
+        public Usuarios createFromParcel(Parcel in) {
+            return new Usuarios(in);
+        }
+
+        @Override
+        public Usuarios[] newArray(int size) {
+            return new Usuarios[size];
+        }
+    };
 
     public String getImagen() {
         return imagen;
-    }
-
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getVivos() {
+        return vivos;
     }
 
     public String getEspecie() {
         return especie;
     }
 
-    public void setEspecie(String especie) {
-        this.especie = especie;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public String getVivos() {
-        return vivos;
-    }
-
-    public void setVivos(String vivos) {
-        this.vivos = vivos;
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(imagen);
+        dest.writeString(nombre);
+        dest.writeString(vivos);
+        dest.writeString(especie);
     }
 }
-

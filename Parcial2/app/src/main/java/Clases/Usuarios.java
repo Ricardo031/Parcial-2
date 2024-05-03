@@ -1,7 +1,8 @@
 package Clases;
 
 import android.os.Parcel;
-import android.os.Parcelable;
+import android.os.Parcelable; //se que esto no lo dimos en la clase pero fue una forma que encontre para
+//que un Objeto pudiera leer un valor y un Intent. se puede ver en Inicio linea: 39. disculpe esta trampa.
 
 public class Usuarios implements Parcelable {
     private String imagen;
@@ -62,5 +63,5 @@ public class Usuarios implements Parcelable {
         dest.writeString(nombre);
         dest.writeString(vivos);
         dest.writeString(especie);
-    }
+    } //esto no lo vimos en la clase. disculpe por usar esto, ya no tenia mas opciones.
 }
